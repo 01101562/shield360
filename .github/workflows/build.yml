@@ -9,11 +9,11 @@ jobs:
         uses: ArtemSBulgakov/buildozer-action@v1
         id: buildozer
         with:
-          workdir:.
+          workdir: .
           buildozer_version: stable
           command: buildozer android debug
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: shield360-apk
-          path:./bin/*.apk
+          path: ./bin/*.apk
